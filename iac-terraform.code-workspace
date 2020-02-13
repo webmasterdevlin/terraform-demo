@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "azure"
+	},
+	{
+		"path": "aws"
+	},
+	{
+		"path": "gcp"
+	}
+],
+  "settings": {}
+}
