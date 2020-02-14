@@ -10,5 +10,15 @@
 		"path": "gcp"
 	}
 ],
-  "settings": {}
+"settings": {
+	"cSpell.words": [
+		"cfp",
+		"com",
+		"demo",
+		"gserviceaccount",
+		"iam",
+		"sa",
+		"terraform"
+	]
+}
 }
