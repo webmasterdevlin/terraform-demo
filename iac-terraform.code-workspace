@@ -1,24 +1,27 @@
 {
   "folders": [
-	{
-		"path": "azure"
-	},
-	{
-		"path": "aws"
-	},
-	{
-		"path": "gcp"
-	}
-],
-"settings": {
-	"cSpell.words": [
-		"cfp",
-		"com",
-		"demo",
-		"gserviceaccount",
-		"iam",
-		"sa",
-		"terraform"
-	]
-}
+    {
+      "path": "azure"
+    },
+    {
+      "path": "aws"
+    },
+    {
+      "path": "gcp"
+    },
+    {
+      "path": "draft"
+    }
+  ],
+  "settings": {
+    "cSpell.words": [
+      "cfp",
+      "com",
+      "demo",
+      "gserviceaccount",
+      "iam",
+      "sa",
+      "terraform"
+    ]
+  }
 }
