@@ -7,12 +7,12 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "dev" {
-  name     = "azuredaypolandrg"
+  name     = "localterraformdemorg"
   location = "westus"
 }
 
 resource "azurerm_app_service_plan" "dev" {
-  name                = "azuredaypoland-appserviceplan"
+  name                = "localterraformdemo-appserviceplan"
   location            = azurerm_resource_group.dev.location
   resource_group_name = azurerm_resource_group.dev.name
 
@@ -23,7 +23,7 @@ resource "azurerm_app_service_plan" "dev" {
 }
 
 resource "azurerm_app_service" "dev" {
-  name                = "azuredaypoland-terraform"
+  name                = "localterraformdemo-terraform"
   location            = azurerm_resource_group.dev.location
   resource_group_name = azurerm_resource_group.dev.name
   app_service_plan_id = azurerm_app_service_plan.dev.id
@@ -45,7 +45,7 @@ resource "azurerm_app_service" "dev" {
 }
 
 resource "azurerm_sql_server" "dev" {
-  name                         = "azuredaypoland-sqlserver"
+  name                         = "localterraformdemo-sqlserver"
   resource_group_name          = azurerm_resource_group.dev.name
   location                     = azurerm_resource_group.dev.location
   version                      = "12.0"
@@ -54,7 +54,7 @@ resource "azurerm_sql_server" "dev" {
 }
 
 resource "azurerm_sql_database" "dev" {
-  name                = "azuredaypoland-sqldatabase"
+  name                = "localterraformdemo-sqldatabase"
   resource_group_name = azurerm_resource_group.dev.name
   location            = azurerm_resource_group.dev.location
   server_name         = azurerm_sql_server.dev.name
