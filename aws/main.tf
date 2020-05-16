@@ -6,7 +6,7 @@ provider "aws" {
 # TRY THIS 1ST
 # resource "aws_instance" "test" {
 #   ami           = "ami-0c55b159cbfafe1f0"
-#   instance_type = "t2.micro"
+#   instance_type = "t3.micro"
 #  tags = {
 #    Name = "my 1st instance"
 #  }
@@ -14,10 +14,10 @@ provider "aws" {
 
 resource "aws_launch_configuration" "test" {
   image_id        = "ami-0c55b159cbfafe1f0"
-  instance_type  = "t2.micro"
+  instance_type   = "t3.micro"
   security_groups = [aws_security_group.test.id]
 
-  user_data      = <<-EOF
+  user_data = <<-EOF
                  #!/bin/bash
                  echo "Hello, World" > index.html
                  nohup busybox httpd -f -p "${var.server_port}" &
@@ -41,14 +41,14 @@ resource "aws_security_group" "test" {
 }
 
 resource "aws_autoscaling_group" "test" {
-  launch_configuration  = aws_launch_configuration.test.id
-  availability_zones    = data.aws_availability_zones.all.names
+  launch_configuration = aws_launch_configuration.test.id
+  availability_zones   = data.aws_availability_zones.all.names
 
   min_size = 2
-  max_size = 10
+  max_size = 4
 
-  load_balancers        = [aws_elb.test.name]
-  health_check_type     = "ELB"
+  load_balancers    = [aws_elb.test.name]
+  health_check_type = "ELB"
 
   tag {
     key                 = "Name"
@@ -59,7 +59,7 @@ resource "aws_autoscaling_group" "test" {
 
 
 data "aws_availability_zones" "all" {
-  
+
 }
 
 
@@ -77,11 +77,11 @@ resource "aws_elb" "test" {
   }
 
   health_check {
-    target               = "HTTP:${var.server_port}/"
-    interval             = 30
-    timeout              = 3
+    target              = "HTTP:${var.server_port}/"
+    interval            = 30
+    timeout             = 3
     healthy_threshold   = 2
-    unhealthy_threshold  = 2
+    unhealthy_threshold = 2
   }
 }
 
