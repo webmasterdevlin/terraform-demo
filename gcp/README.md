@@ -45,6 +45,13 @@ Check your console.cloud.google.com/home/dashboard after running this.
 $ terraform apply
 ```
 
+ - Create SSH Key
+```sh
+ssh-keygen -t rsa -b 2048 -f mykey
+```
+
+ - Use SSH Client
+
 ```sh
 ssh -i path-to-private-key username@external-ip
 ```

@@ -31,10 +31,16 @@ Check your portal.azure.com after running this.
 $ terraform apply
 ```
 
- - SSH
+ - Create SSH Key
 ```sh
-ssh-keygen -t rsa -b 4096 -f mykey
+ssh-keygen -t rsa -b 2048 -f mykey
 ```
+
+ - Use SSH Client
+```sh
+ssh azureuser@myvm.westus.cloudapp.azure.com
+```
+
 
 The terraform destroy command is used to destroy the Terraform-managed infrastructure.
 ```sh

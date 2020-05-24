@@ -57,8 +57,12 @@ $ terraform apply
 ```sh
 $ curl http://<EC2_INSTANCE_PUBLIC_IP>:8080
 ```
+ - Create SSH Key
+```sh
+ssh-keygen -t rsa -b 2048 -f mykey
+```
 
-    - SSH
+ - Use SSH Client
 ```sh
 ssh -i /path/my-key-pair.pem my-instance-user-name@my-instance-public-dns-name
 ```
