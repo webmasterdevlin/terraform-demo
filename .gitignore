@@ -1,4 +1,8 @@
 **.tfstate
 **.backup
 **.info
+**.plan
+
 .terraform
+
+sandbox

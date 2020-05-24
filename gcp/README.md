@@ -45,6 +45,10 @@ Check your console.cloud.google.com/home/dashboard after running this.
 $ terraform apply
 ```
 
+```sh
+ssh -i path-to-private-key username@external-ip
+```
+
 The terraform destroy command is used to destroy the Terraform-managed infrastructure.
 
 ```sh

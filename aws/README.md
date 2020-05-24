@@ -58,6 +58,11 @@ $ terraform apply
 $ curl http://<EC2_INSTANCE_PUBLIC_IP>:8080
 ```
 
+    - SSH
+```sh
+ssh -i /path/my-key-pair.pem my-instance-user-name@my-instance-public-dns-name
+```
+
 The terraform destroy command is used to destroy the Terraform-managed infrastructure.
 
 ```sh

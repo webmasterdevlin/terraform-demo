@@ -31,6 +31,11 @@ Check your portal.azure.com after running this.
 $ terraform apply
 ```
 
+ - SSH
+```sh
+ssh-keygen -t rsa -b 4096 -f mykey
+```
+
 The terraform destroy command is used to destroy the Terraform-managed infrastructure.
 ```sh
 $ terraform destroy
