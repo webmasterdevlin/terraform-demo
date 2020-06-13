@@ -1,4 +1,4 @@
-## Terraform in Microsoft Azure
+## Terraform in AWS
 
 #### Requirements
 
