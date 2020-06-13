@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file("service-account.json")
+  credentials = file("service-account.json") # the file that holds your credentials
   project     = var.project_name
   region      = var.region
   zone        = var.region_zone
