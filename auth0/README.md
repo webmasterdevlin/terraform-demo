@@ -7,7 +7,7 @@
 
 #### To start
 
-create Terraform file main.tf then add a [azure provider](https://www.terraform.io/docs/providers/azurerm/index.html).
+create Terraform file main.tf then add a [Auth0 provider](https://www.terraform.io/docs/providers/auth0/index.html).
 
 #### Auth0 Dashboard -> APIs
 
