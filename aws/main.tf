@@ -1,4 +1,6 @@
-provider "aws" {}
+provider "aws" {
+  region = "us-east-2"
+}
 
 # -----------------------------------------
 # TRY THIS 1ST
