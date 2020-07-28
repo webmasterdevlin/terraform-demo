@@ -16,6 +16,7 @@ Local environment variable credential
 ```sh
 export AWS_ACCESS_KEY_ID=(your access key id)
 export AWS_SECRET_ACCESS_KEY=(your secret access key)
+export AWS_DEFAULT_REGION=(your-region)
 ```
 
 - or if you are using CMD
@@ -23,6 +24,7 @@ export AWS_SECRET_ACCESS_KEY=(your secret access key)
 ```sh
 set AWS_ACCESS_KEY_ID=(your access key id)
 set AWS_SECRET_ACCESS_KEY=(your secret access key)
+set AWS_DEFAULT_REGION=(your-region)
 ```
 
 - or if you are using PowerShell
@@ -30,6 +32,7 @@ set AWS_SECRET_ACCESS_KEY=(your secret access key)
 ```sh
 $env:AWS_ACCESS_KEY_ID="(your access key id)"
 $env:AWS_SECRET_ACCESS_KEY="(your secret access key)"
+$env:AWS_DEFAULT_REGION="(your-region)"
 ```
 
 create Terraform file main.tf then add a [aws provider](https://www.terraform.io/docs/providers/aws/index.html).
@@ -57,12 +60,15 @@ $ terraform apply
 ```sh
 $ curl http://<EC2_INSTANCE_PUBLIC_IP>:8080
 ```
- - Create SSH Key
+
+- Create SSH Key
+
 ```sh
 ssh-keygen -t rsa -b 2048 -f mykey
 ```
 
- - Use SSH Client
+- Use SSH Client
+
 ```sh
 ssh -i /path/my-key-pair.pem my-instance-user-name@my-instance-public-dns-name
 ```
