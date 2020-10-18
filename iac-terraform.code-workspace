@@ -10,12 +10,6 @@
       "path": "gcp"
     },
     {
-      "path": "local"
-    },
-    {
-      "path": "cloudshell"
-    },
-    {
       "path": "auth0"
     }
   ],
@@ -25,6 +19,7 @@
       "com",
       "demo",
       "gserviceaccount",
+      "hashicorp",
       "iam",
       "sa",
       "terraform"
