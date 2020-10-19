@@ -25,6 +25,12 @@
 
 create Terraform file main.tf then add a [gcp provider](https://www.terraform.io/docs/providers/google/index.html).
 
+For Terraform 13 compatibility
+
+```sh
+$ terraform 0.13upgrade .
+```
+
 The terraform init command is used to initialize a working directory containing Terraform configuration files.
 
 ```sh

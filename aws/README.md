@@ -37,6 +37,12 @@ $env:AWS_DEFAULT_REGION="(your-region)"
 
 create Terraform file main.tf then add a [aws provider](https://www.terraform.io/docs/providers/aws/index.html).
 
+For Terraform 13 compatibility
+
+```sh
+$ terraform 0.13upgrade .
+```
+
 The terraform init command is used to initialize a working directory containing Terraform configuration files.
 
 ```sh
