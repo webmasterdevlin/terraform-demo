@@ -2,6 +2,7 @@
 **.backup
 **.info
 **.plan
+**.terraform.lock.hcl
 
 .terraform
 
