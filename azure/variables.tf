@@ -1,4 +1,4 @@
-variable "resource-group-name" {
+variable "resource_group_name" {
   default     = "my-resource-group-1"
   description = "The prefix used for all resources in this example"
 }
@@ -8,22 +8,22 @@ variable "location" {
   description = "The Azure location where all resources in this example should be created"
 }
 
-variable "app-service-name" {
+variable "app_service_name" {
   default     = "webmasterdevlin-terraform-demo"
   description = "The name of the Web App"
 }
 
-variable "app-settings-value-x" {
+variable "app_settings_value_x" {
   default     = "my-secret-value"
   description = "value for the app setting key"
 }
 
-variable "admin-login-devlin" {
+variable "admin_login_devlin" {
   default     = "devlinduldulao"
   description = "Devlin's login name"
 }
 
-variable "admin-pass-devlin" {
+variable "admin_pass_devlin" {
   default     = "v3ry_Uniqu3Pa$$w0rd"
   description = "Devlin's password"
 }

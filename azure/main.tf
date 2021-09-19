@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "test" {
-  name     = var.resource-group-name
+  name     = var.resource_group_name
   location = var.location
 }
 
@@ -15,7 +15,7 @@ resource "azurerm_app_service_plan" "test" {
 }
 
 resource "azurerm_app_service" "test" {
-  name                = var.app-service-name
+  name                = var.app_service_name
   location            = azurerm_resource_group.test.location
   resource_group_name = azurerm_resource_group.test.name
   app_service_plan_id = azurerm_app_service_plan.test.id
@@ -26,7 +26,7 @@ resource "azurerm_app_service" "test" {
   }
 
   app_settings = {
-    "MY_SECRET_KEY" = var.app-settings-value-x
+    "MY_SECRET_KEY" = var.app_settings_value_x
   }
 
   connection_string {
@@ -41,8 +41,8 @@ resource "azurerm_sql_server" "test" {
   resource_group_name          = azurerm_resource_group.test.name
   location                     = azurerm_resource_group.test.location
   version                      = "12.0"
-  administrator_login          = var.admin-login-devlin
-  administrator_login_password = var.admin-pass-devlin
+  administrator_login          = var.admin_login_devlin
+  administrator_login_password = var.admin_pass_devlin
 }
 
 resource "azurerm_sql_database" "test" {

@@ -31,7 +31,7 @@ variable "tenant_id" {
 }
 
 locals {
-  app-service-name = "webmasterdevlin-terraform-test"
+  app_service_name = "webmasterdevlin-terraform-test"
 }
 
 module "main" {
@@ -45,19 +45,19 @@ module "main" {
   tenant_id       = var.tenant_id
 
   # Replace with your own values
-  app-service-name = local.app-service-name
+  app_service_name = local.app_service_name
 }
 
 
 ########### Act and Assert #############
 
-resource "test_assertions" "app-service-name" {
+resource "test_assertions" "app_service_name" {
 
-  component = "app-service-name"
+  component = "app_service_name"
 
   check "name" {
-    description = "app-service-name should match ${local.app-service-name}"
-    condition   = module.main.app_service_name == local.app-service-name
+    description = "app_service_name should match ${local.app_service_name}"
+    condition   = module.main.app_service_name == local.app_service_name
   }
 }
 
