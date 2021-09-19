@@ -58,3 +58,10 @@ The terraform destroy command is used to destroy the Terraform-managed infrastru
 ```sh
 $ terraform destroy
 ```
+
+### Outputs
+
+- app_service_default_hostname = "https://webmasterdevlin-terraform-demo.azurewebsites.net"
+- app_service_name = "webmasterdevlin-terraform-demo"
+- sql_database_name = "foo-sql-database-1"
+- sql_server_name = "foo-sql-server-1"

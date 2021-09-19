@@ -9,7 +9,7 @@ variable "location" {
 }
 
 variable "app-service-name" {
-  default     = "my-app-service-1"
+  default     = "webmasterdevlin-terraform-demo"
   description = "The name of the Web App"
 }
 
