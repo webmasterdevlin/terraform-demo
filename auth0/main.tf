@@ -1,6 +1,3 @@
-provider "auth0" {}
-
-
 resource "auth0_email" "my_email_provider" {
   name                 = "ses"
   enabled              = true
